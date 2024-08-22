@@ -1,0 +1,35 @@
+public class RomanAscendingDescendingPattern {
+    public static void main(String[] args) {
+        int number = 5; // Specify the total number of lines
+
+        // Determine the middle index
+        int middle = (number + 1) / 2;
+
+        // Ascending part
+        for (int i = 1; i <= middle; i++) {
+            printWithSpaces(i, middle);
+        }
+
+        // Descending part
+        for (int i = middle - 1; i >= 1; i--) {
+            printWithSpaces(i, middle);
+        }
+    }
+
+    // Function to print Roman numeral with leading spaces
+    public static void printWithSpaces(int num, int max) {
+        // Print leading spaces
+        for (int j = 1; j <= max - num; j++) {
+            System.out.print(" ");
+        }
+        // Print the Roman numeral
+        System.out.println(convertToRoman(num));
+    }
+
+    // Function to convert an integer to a Roman numeral
+    public static String convertToRoman(int num) {
+        String[] units = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+
+        return units[num];
+    }
+}
