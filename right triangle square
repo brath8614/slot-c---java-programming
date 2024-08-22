@@ -1,0 +1,17 @@
+public class RightTriangleUniqueSquaresPattern {
+    public static void main(String[] args) {
+        int rows = 5; // Specify the number of rows
+        int currentNumber = 1; // Start from the first number
+
+        for (int i = 1; i <= rows; i++) {
+            // Loop to print the squares of unique numbers in each row
+            for (int j = 1; j <= i; j++) {
+                int square = currentNumber * currentNumber; // Calculate the square of the current number
+                System.out.print(square + " ");
+                currentNumber++; // Move to the next number
+            }
+            // Move to the next line after printing each row
+            System.out.println();
+        }
+    }
+}
